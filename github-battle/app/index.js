@@ -1,7 +1,8 @@
 import React from 'react'
-import ReactDOM from  'react-dom'
+import ReactDOM from 'react-dom'
 import './index.css'
 import Popular from './components/Popular'
+import Battle from './components/Battle'
 
 // Component
 // State 
@@ -9,16 +10,17 @@ import Popular from './components/Popular'
 // UI
 
 class App extends React.Component {
-    render(){
+    render() {
         return (
             <div>
-                <Popular/>
+                {/* <Popular /> */}
+                <Battle />
             </div>
-        )    
+        )
     }
-} 
+}
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.getElementById('app')
 ) 
