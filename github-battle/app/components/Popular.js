@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { fetchPopularRepos } from '../utils/api'
 import { FaUser, FaStar, FaCodeBranch, FaExclamationTriangle } from 'react-icons/fa'
+import Card from './Card'
 
 function LanguagesNav({ selected, onUpdateLanguage }) {
     const languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python']
@@ -35,6 +36,14 @@ function ReposGrid({ repos }) {
 
                 return (
                     <li key={html_url} className='card bg-light'>
+                        <Card
+                            header = {winner.score === loser.score ? 'Tie' : 'Winner' }
+                            avatar = {avatar_url}
+                            href = {winner.profile.html_url}
+                            name = {winner.profile.login}
+                        >
+
+                        </Card>
                         <h4 className='header-lg center-text'>
                             #{index + 1}
                         </h4>
