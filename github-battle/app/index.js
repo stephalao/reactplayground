@@ -1,26 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import Popular from './components/Popular'
-import Battle from './components/Battle'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Popular from "./components/Popular";
+import Battle from "./components/Battle";
 
 // Component
-// State 
-// Lifecycle 
+// State
+// Lifecycle
 // UI
 
 class App extends React.Component {
-    render() {
-        return (
-            <div>
-                {/* <Popular /> */}
-                <Battle />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        {/* <Popular /> */}
+        <Battle />
+      </div>
+    );
+  }
 }
 
-ReactDOM.render(
-    <App />,
-    document.getElementById('app')
-) 
+ReactDOM.render(<App />, document.getElementById("app"));
