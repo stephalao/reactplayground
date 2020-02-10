@@ -1,7 +1,8 @@
 import Card from "./Card";
+import Tooltip from "./Tooltip";
+import Loading from "./Loading";
 import PropTypes from "prop-types";
 import { battle } from "../utils/api";
-import Loading from "./Loading";
 import React, { Component } from "react";
 import {
   FaCompass,
@@ -21,14 +22,18 @@ function ProfileList({ profile }) {
       </li>
       {profile.location && (
         <li>
-          <FaCompass color="rgb(144, 116, 255)" size={22} />
-          {profile.location}
+          <Tooltip text="User's Location">
+            <FaCompass color="rgb(144, 116, 255)" size={22} />
+            {profile.location}
+          </Tooltip>
         </li>
       )}
       {profile.company && (
         <li>
-          <FaBriefcase color="#795548" size={22} />
-          {profile.company}
+          <Tooltip text="User's Company">
+            <FaBriefcase color="#795548" size={22} />
+            {profile.company}
+          </Tooltip>
         </li>
       )}
       <li>
